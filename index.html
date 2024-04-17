@@ -2,36 +2,50 @@
 <html>
 	<head>
 		<style>
-			#form  > * {
-				display: block;
+			body {
+				background-color: white;
 			}
-			#form > div > * {
-				display: inline-block;
-			}
-			#submitContainer {
+			#formContainer {
 				text-align: center;
+				/*border: 1px solid red; */
+			}
+			form {
+				display: inline-block;
+				/* border: 1px solid green; */
+				margin: 15%;
+			}
+			form > * {
+				text-align: left;
+				margin: 15px 0px 15px 0px;
+				padding: 5px;
+			}
+			.inputLabel {
+				display: inline-block;
+				width: 200px;
+			}
+			#submit {
+				font-size: 20px;
+				background-color: lightgreen;
 			}
 		</style>
 	</head>
 	<body>
-		<form id = 'form'>
-			<div>
-				<div>
-					<label for = 'name'> Fullname: </label> </br>
-					<label for = 'email'> Email: </label> </br>
-					<label for = 'password'> Password: </label> </br>
-					<label for = 'confirmPassword'> Confirm password: </label> </br>
-				</div>
-				<div>
-					<input type = 'text' id = 'name' name = 'name' /> </br>
-					<input type = 'text' id = 'email' name = 'email' /> </br>
-					<input type = 'text' id = 'password' name = 'password' /> </br>
-					<input type = 'text' id = 'confirmPassword' name = 'confirmPassword' /> </br>
-				</div>
-			</div>
-			<div id = 'submitContainer'>
-				<input type = 'submit' id = 'submit' name = 'submit' value = 'Submit' />
-			</div>
-		</form>
+		<div id = 'formContainer'>
+			<form>
+				<label class = 'inputLabel' for = 'username'> Username: </label>
+				<input placeholder = 'username' id = 'username'/> </br>
+
+				<label class = 'inputLabel' for = 'email'> Email: </label>
+				<input placeholder = 'email' id = 'email'/> </br>
+
+				<label class = 'inputLabel' for = 'password'> Password: </label>
+				<input placeholder = 'password' id = 'password'/> </br>
+
+				<label class = 'inputLabel' for = 'confirm password'> Confirm password: </label>
+				<input placeholder = 'confirm password' id = 'confirm password'/> </br>
+
+				<input id = 'submit' type = 'submit' value = 'Submit' />
+			</form>
+		</div>
 	</body>
 </html>
